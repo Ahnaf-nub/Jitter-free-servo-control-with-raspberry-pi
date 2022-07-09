@@ -1,10 +1,10 @@
 import RPi.GPIO as GPIO
 import pigpio
 import time 
-servo = 13
-pwm = pigpio.pi()
+servo = 13 #কোন পিন এ কানেক্ট করেছি সেটা বলে দিলাম। 
+pwm = pigpio.pi() 
 pwm.set_mode(servo, pigpio.OUTPUT)
-pwm.set_PWM_frequency(servo, 50)
+pwm.set_PWM_frequency(servo, 50) #PWM ফ্রিকুএন্সি সেট করে দিলাম এটা ৫০ রাখলেই ভাল। 
 print("0 deg")
 pwm.set_servo_pulsewidth(servo, 500) ;
 time.sleep(3)
